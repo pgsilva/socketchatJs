@@ -1,0 +1,26 @@
+{
+  "name": "socketchatjs",
+  "version": "1.0.0",
+  "description": "chat in real time com socket.io angularJs e nodeJs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgsilva/socketchatJs.git"
+  },
+  "author": "pgsilva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pgsilva/socketchatJs/issues"
+  },
+  "homepage": "https://github.com/pgsilva/socketchatJs#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "consign": "^0.1.6",
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}
