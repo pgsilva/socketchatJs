@@ -15,6 +15,6 @@ consign({ cwd: 'app' })
  * DEPLOY
  * 
  * */
-app.listen(process.env.PORT || 3000);
+//app.listen(process.env.PORT || 3000);
 
 module.exports = app;

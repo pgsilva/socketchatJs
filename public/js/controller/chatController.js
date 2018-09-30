@@ -7,6 +7,7 @@ angular.module('chat').controller('ChatController', function ($scope, $http) {
 
     //funcoes de escopo
     $scope.enviar = enviar;
+    $scope.cleanchat = cleanchat;
 
     init();
 
@@ -35,4 +36,10 @@ angular.module('chat').controller('ChatController', function ($scope, $http) {
         socket.emit('conversa enviar',$scope.message);
         $scope.message.item = '';
     }
+
+    function cleanchat() {
+        if ($scope.chat) {
+            $scope.chat = [];
+        }
+    };
 });
