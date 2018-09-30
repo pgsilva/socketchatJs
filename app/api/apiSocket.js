@@ -7,4 +7,5 @@ api.teste = function (req, res) {
     res.json(doc);
 };
 
+
 module.exports = api;

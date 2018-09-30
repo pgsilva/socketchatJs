@@ -1,6 +1,6 @@
 angular.module('chat').controller('ChatController', function ($scope, $http) {
     var socket = io();
-   
+
     //variaveis de escopo
     $scope.message = {};
     $scope.chat = [];
@@ -33,13 +33,18 @@ angular.module('chat').controller('ChatController', function ($scope, $http) {
     }
 
     function enviar() {
-        socket.emit('conversa enviar',$scope.message);
+        socket.emit('conversa enviar', $scope.message);
         $scope.message.item = '';
     }
 
     function cleanchat() {
         if ($scope.chat) {
             $scope.chat = [];
+
+            socket.on('conversas', function (chat) {
+                $scope.chat = chat;
+                $scope.$apply();
+            });
         }
     };
 });

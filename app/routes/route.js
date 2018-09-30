@@ -3,5 +3,6 @@ module.exports = function (app) {
 
     //config de rotas
     app.get('/api/', api.teste);
+    app.get('/api/chat/clean', api.limpachat);
 
 };
